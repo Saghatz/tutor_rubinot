@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@600&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@900&display=swap%27');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body, html{
+    overflow: auto;
+    background: url('../src/Aniver_RubinOT.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #fff;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid #000;
+}
+
+input{
+    border: 0;
+    border-bottom: 2px solid #000;
+    padding: 2px;
+    background: transparent;
+}
+
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.clean:hover{
+    background: #b3131b;
+}
+
+.primary:hover{
+    background: #2968c8;
+}
+
+.end:hover, .copiarFinalizado:hover{
+    background: #00a650;
+}
+
+.container {
+    width: 50%;
+    margin-right: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container strong {
+    color: white;
+    text-shadow: 
+               -1px -1px 0px #000, 
+               -1px 1px 0px #000,                    
+                1px -1px 0px #000,                  
+                1px 0px 0px #000;
+}
+
+button {
+    background: #fff;
+    font-size: 14px;
+    width: 140px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 15px;
+    transition: all 0.2s;
+    margin: 8px; /* Margem para espaçamento entre botões */
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos na largura total */
+}
+
+.container2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2%;
+    border-radius: 30px;
+    width: 90vw; /* Usa 90% da largura da viewport */
+    height: 90vh; /* Usa 90% da altura da viewport */
+    max-width: 700px; /* Limita a largura máxima */
+    max-height: 850px; /* Limita a altura máxima */
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+/* Estilo quando minimizado */
+.container2.minimized {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    overflow: hidden;
+    top: 50px;
+    right: 20px;
+    left: auto;
+    background: transparent;
+}
+
+/* Ocultar o conteúdo quando minimizado */
+.container2.minimized .content {
+    display: none;
+}
+
+/* Estilo do botão de minimizar */
+.container2 button {
+    position: absolute; /* Permite posicionamento absoluto dentro do contêiner */
+    top: 15px; /* Distância do topo do contêiner */
+    right: 20px; /* Distância do lado direito do contêiner */
+    background: transparent; /* Fundo transparente */
+    border: none; /* Sem borda */
+    padding: 0; /* Sem espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro ao passar sobre o botão */
+    width: 50px; /* Ajuste a largura do botão */
+    height: 50px; /* Ajuste a altura do botão */
+}
+
+/* Estilo da imagem do ícone */
+.container2 button img {
+    width: 100%; /* Ocupa 100% do botão */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+.avisos_canais, .config_client, .orientacoes_players, .quets_tasks, .regras_gerais, .config_rtc, .outros{
+    background: rgba(80, 162, 255, 1);
+    padding: 12px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.config_client{
+    background: #41d0a5;
+}
+
+.config_rtc{
+    background: #41d054;
+}
+
+.orientacoes_players{
+    background: #f0c808;
+    
+}
+
+.quets_tasks{
+    background: #f06508;
+    
+}
+
+.regras_gerais{
+    background: #dd1c1a;
+}
+
+.finalizado{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button{
+    cursor: pointer;
+}
+
+.avisos_canais:hover{
+    background: rgba(158, 211, 255, 0.8);
+}
+
+.config_client:hover{
+    background: rgba(190, 255, 207, 0.8);
+}
+
+.config_rtc:hover{
+    background: rgba(190, 255, 207, 0.8);
+}
+
+.orientacoes_players:hover, .quets_tasks:hover{
+    background: rgba(255, 254, 173, 0.8);
+}
+
+.regras_gerais:hover{
+    background: rgba(255, 75, 75, 0.8);
+}
+
+abbr {
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 0.8em;
+    }
+    .avisos_canais, .config_client, .orientacoes_players, .quets_tasks, .regras_gerais, .config_rtc, .outros {
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 992px) {
+    button {
+        font-size: 12px;
+        width: 120px;
+        height: 28px;
+    }
+    .container {
+        padding: 0.5em;
+    }
+    .container2 {
+        padding: 3%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+    .avisos_canais, .config_client, .orientacoes_players, .quets_tasks, .regras_gerais, .config_rtc, .outros {
+        width: 60px;
+        height: 60px;
+        font-size: 11px;
+    }
+    button {
+        font-size: 11px;
+        width: 100px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0.3em;
+    }
+    .avisos_canais, .config_client, .orientacoes_players, .quets_tasks, .regras_gerais, .config_rtc, .outros {
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+    }
+    button {
+        font-size: 10px;
+        width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+        height: auto; /* Permite altura automática */
+        padding: 10px; /* Aumenta o espaçamento interno para facilitar o toque */
+    }
+}
